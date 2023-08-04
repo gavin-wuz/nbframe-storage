@@ -1,0 +1,114 @@
+{
+  "_from": "git+http://192.168.9.172:8888/npm-publish/nbframe-storage",
+  "_id": "nbframe-storage@0.7.0",
+  "_inBundle": false,
+  "_integrity": "sha1-3JBGY0sxwQ+tI+dpZq9EC+KoMDc=",
+  "_location": "/nbframe-storage",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "git+http://192.168.9.172:8888/npm-publish/nbframe-storage",
+    "rawSpec": "git+http://192.168.9.172:8888/npm-publish/nbframe-storage",
+    "saveSpec": "git+http://192.168.9.172:8888/npm-publish/nbframe-storage",
+    "fetchSpec": "http://192.168.9.172:8888/npm-publish/nbframe-storage",
+    "gitCommittish": "master"
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "git+http://192.168.9.172:8888/npm-publish/nbframe-storage#08b4a5948f45a8011e8ea2a0ca4ab702bbec99d1",
+  "_spec": "git+http://192.168.9.172:8888/npm-publish/nbframe-storage",
+  "_where": "F:\\project\\creation\\creation-zone-server\\game-server",
+  "author": {
+    "name": "gavin.wuz",
+    "email": "gavin.wuz@gmail.com"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "uuid": "^3.2.1"
+  },
+  "deprecated": false,
+  "description": "suport mysql, mongodb, redis, clickhouse drive.",
+  "devDependencies": {
+    "@types/chai": "^4.1.3",
+    "@types/expect": "^1.20.3",
+    "@types/mocha": "^5.2.0",
+    "@types/mongodb": "^2.2.3",
+    "@types/mysql": "^2.15.4",
+    "@types/redis": "^2.8.6",
+    "@types/source-map": "^0.5.7",
+    "@types/uglify-js": "^3.0.2",
+    "@types/uuid": "^3.4.3",
+    "apidoc": "^0.17.6",
+    "babel-eslint": "^7.2.3",
+    "chai": "^3.5.0",
+    "clickhouse": "^2.4.1",
+    "cross-env": "^5.1.1",
+    "mocha": "^4.1.0",
+    "mocha-typescript": "^1.1.12",
+    "mongodb": "^2.2.33",
+    "mongoose": ">= 3.0.0",
+    "mysql": ">2.14.0",
+    "nodemon": "^1.11.0",
+    "npm-run-all": "^4.0.2",
+    "nyc": "^11.4.1",
+    "pm2": "^2.10.2",
+    "pre-commit": "^1.2.2",
+    "redis": "^2.8.0",
+    "rimraf": "^2.6.2",
+    "source-map-support": "^0.5.0",
+    "standard": "^10.0.2",
+    "supertest": "^3.0.0",
+    "ts-mocha": "^1.2.0",
+    "ts-node": "^6.0.3",
+    "tslint": "^5.8.0",
+    "typedoc": "^0.11.1",
+    "typescript": "^2.6.2"
+  },
+  "keywords": [
+    "mysql",
+    "redis",
+    "mongodb",
+    "mapper"
+  ],
+  "license": "ISC",
+  "main": "./index.js",
+  "name": "nbframe-storage",
+  "nyc": {
+    "extension": [
+      ".ts"
+    ],
+    "reporter": [
+      "lcov",
+      "text-summary"
+    ],
+    "include": [
+      "src"
+    ],
+    "all": true
+  },
+  "pre-commit": [
+    "check"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://192.168.9.172:8888/rdc-nbframe/nbframe-storage.git"
+  },
+  "scripts": {
+    "apidoc": "apidoc -i src/ -o dist/apidoc/",
+    "build": "npm run clear && tsc",
+    "build:npm": "npm run clear && tsc -removeComments false --outDir ../../npm-publish/nbframe-storage/ --declaration --declarationDir ../../npm-publish/nbframe-storage/types && npm run copy",
+    "build:ts": "npm run clear && tsc --sourceMap true --removeComments false --outDir dist --declaration --declarationDir dist/types",
+    "check": "echo \"Checking...\" && tsc && npm run tslint",
+    "clear": "rimraf -rf dist types lib coverage .nyc_output",
+    "copy": "xcopy package.json ..\\..\\npm-publish\\nbframe-storage\\ /y /q && xcopy README.md ..\\..\\npm-publish\\nbframe-storage\\  /y /q && xcopy tsconfig.json ..\\..\\npm-publish\\nbframe-storage\\ /y /q",
+    "jsdoc": "jsdoc -c conf.json dist",
+    "test": "cross-env NODE_ENV=development cross-env TEST_MODE=true nyc mocha --require ts-node/register --exit --reporter spec src/test/databse-ch.spec.ts",
+    "test:coverage": "cross-env NODE_ENV=development cross-env TEST_MODE=true nyc mocha --exit --reporter spec",
+    "tslint": "tslint -c tslint.json -p tsconfig.json",
+    "typedoc": "typedoc -out dist/apidoc/ src/"
+  },
+  "types": "./types/index.d.ts",
+  "version": "0.7.0"
+}

@@ -1,0 +1,45 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "outDir": "./dist",
+        "declaration": false,
+        "sourceMap": false,
+        "removeComments": true,
+        "noImplicitAny": true,
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "target": "es6",
+        "watch": false,
+        "baseUrl": "./src",
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noImplicitUseStrict": true,
+        "rootDir": "./src",
+        "paths": {
+            "*": [
+                "node_modules/*",
+                "src/types/*"
+            ]
+        },
+        "typeRoots": [
+            "./node_modules/@types/"
+        ],
+        "types": [
+            "mocha",
+            "chai"
+        ],
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "types",
+        "test",
+        "src/test",
+    ]
+}
