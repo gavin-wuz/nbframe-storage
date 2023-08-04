@@ -1,5 +1,5 @@
 {
-  "_from": "git+http://192.168.9.172:8888/npm-publish/nbframe-storage",
+  "_from": "git+https://github.com/gavin-wuz/nbframe-storage",
   "_id": "nbframe-storage@0.7.0",
   "_inBundle": false,
   "_integrity": "sha1-3JBGY0sxwQ+tI+dpZq9EC+KoMDc=",
@@ -7,18 +7,18 @@
   "_phantomChildren": {},
   "_requested": {
     "type": "git",
-    "raw": "git+http://192.168.9.172:8888/npm-publish/nbframe-storage",
-    "rawSpec": "git+http://192.168.9.172:8888/npm-publish/nbframe-storage",
-    "saveSpec": "git+http://192.168.9.172:8888/npm-publish/nbframe-storage",
-    "fetchSpec": "http://192.168.9.172:8888/npm-publish/nbframe-storage",
+    "raw": "git+https://github.com/gavin-wuz/nbframe-storage",
+    "rawSpec": "git+https://github.com/gavin-wuz/nbframe-storage",
+    "saveSpec": "git+https://github.com/gavin-wuz/nbframe-storage",
+    "fetchSpec": "https://github.com/gavin-wuz/nbframe-storage",
     "gitCommittish": "master"
   },
   "_requiredBy": [
     "#DEV:/",
     "#USER"
   ],
-  "_resolved": "git+http://192.168.9.172:8888/npm-publish/nbframe-storage#08b4a5948f45a8011e8ea2a0ca4ab702bbec99d1",
-  "_spec": "git+http://192.168.9.172:8888/npm-publish/nbframe-storage",
+  "_resolved": "git+https://github.com/gavin-wuz/nbframe-storage#08b4a5948f45a8011e8ea2a0ca4ab702bbec99d1",
+  "_spec": "git+https://github.com/gavin-wuz/nbframe-storage",
   "_where": "F:\\project\\creation\\creation-zone-server\\game-server",
   "author": {
     "name": "gavin.wuz",
@@ -93,7 +93,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "http://192.168.9.172:8888/rdc-nbframe/nbframe-storage.git"
+    "url": "https://github.com/gavin-wuz/nbframe-storage"
   },
   "scripts": {
     "apidoc": "apidoc -i src/ -o dist/apidoc/",
